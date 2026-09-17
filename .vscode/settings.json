@@ -1,0 +1,7 @@
+{
+  "gitdoc.enabled": true,
+  "gitdoc.pushMode": "push",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}

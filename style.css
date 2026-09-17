@@ -1,3 +1,4 @@
+/* ===== Bara fonts ===== */
 @font-face {
   font-family: "Michroma";
   src: url("fonts/Michroma-Regular.ttf") format("truetype");
@@ -18,23 +19,101 @@
   font-weight: 100 900;
   font-style: normal;
 }
+/* ===== Allmänt ===== */
 
-.main {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(206, 206, 206);
+  background-color: black;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== Navigering ===== */
+.logo-text {
   font-family: "Michroma", sans-serif;
   font-size: 2.5rem;
 }
 
-.bar {
+.nav-item {
   font-family: "Space Grotesk Michroma", sans-serif;
   font-size: 1.5rem;
 }
 
+.nav-item:hover {
+  color: #466086;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin: auto;
+  list-style: none;
+  padding: 10px 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.nav-links li {
+  padding: 0 15px;
+  border-right: 1px solid white;
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
+
+/* ===== Intro / om sidan ===== */
+
+.about-site {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Michroma", sans-serif;
+  font-size: 1rem;
+}
+
+.eye-gif {
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 100px auto;
+}
+
+.intro {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 300px;
+  padding: 0 10px;
+}
+/* ===== Filmer ===== */
+
 .title {
   font-family: "Michroma", sans-serif;
   font-size: 2rem;
+  text-align: center;
 }
 
-.case {
+.case-number {
   font-family: "Space Grotesk Michroma", sans-serif;
   font-size: 1rem;
 }
@@ -43,7 +122,173 @@
   font-size: 1.5rem;
 }
 
-.about-movie {
+.movie-description {
   font-family: "Caveat", cursive;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  margin: 20px 15px;
+}
+
+/* Kolumner minst 250px bredda, staplas på höjd på mobil, gap = avstånd */
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+}
+
+.movie-poster {
+  width: 300px;
+  height: auto;
+  align-self: center;
+}
+.movie-card {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(32, 41, 59, 0.2);
+  border-color: red;
+  text-align: center;
+  max-width: 450px;
+  place-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* ===== Footer/slutet av sidan ===== */
+
+.main-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  margin-top: 200px;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+#rättigheter {
+  border-top: 1px solid white;
+  padding-top: 20px;
+  margin-top: 80px;
+}
+
+/* --- För mobiler --- */
+
+@media (max-width: 599px) {
+  .logo-text {
+    font-size: 1.8rem;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 5px;
+    padding: 10px 5px;
+  }
+
+  .nav-links li {
+    padding: 0 5px;
+  }
+
+  .movie-request {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+}
+
+/* == För större skärmar) == */
+
+@media (min-width: 600px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movie-request {
+    padding: 60px;
+  }
+}
+
+/* == Animationer / extra == */
+
+.about-site {
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* == more.html == */
+/* == intro == */
+.effect-gif {
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 100px auto 100px;
+}
+
+/* == request-movie == */
+.movie-request {
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(32, 41, 59, 0.2);
+}
+
+.movie-request h2 {
+  font-family: "Michroma", sans-serif;
+  font-size: 2rem;
+}
+
+.movie-request p {
+  font-family: "Space Grotesk Michroma", sans-serif;
+  line-height: 1.6;
+}
+
+.movie-request form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.movie-request input,
+.movie-request textarea {
+  padding: 10px;
+  font-family: "Space Grotesk Michroma", sans-serif;
+  background-color: #20293b;
+  color: white;
+  border: 1px solid #466086;
+}
+
+.movie-request button {
+  margin-top: 20px;
+  padding: 12px;
+  cursor: pointer;
+  color: white;
+  background-color: #516489;
+}
+
+/* == Responsivtet (mobil->större skärm) MORE.HTML == */
+@media (min-width: 600px) {
+  .movie-request {
+    padding: 60px;
+  }
 }
