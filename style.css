@@ -206,7 +206,7 @@ a {
     box-sizing: border-box;
   }
   .movies-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px;
     justify-content: center;
   }
   .movie-card {
