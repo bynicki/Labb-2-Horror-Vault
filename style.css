@@ -145,7 +145,7 @@ a {
   align-self: center;
 }
 .movie-card {
-  width: 90%;
+  width: 300px;
   height: auto;
   display: flex;
   flex-direction: column;
