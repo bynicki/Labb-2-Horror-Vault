@@ -205,6 +205,9 @@ a {
     padding: 25px;
     box-sizing: border-box;
   }
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* == För större skärmar) == */
