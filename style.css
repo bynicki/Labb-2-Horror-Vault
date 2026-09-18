@@ -214,7 +214,7 @@ a {
 
 @media (min-width: 600px) {
   .movies-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 300px);
   }
   .movie-request {
     padding: 60px;
