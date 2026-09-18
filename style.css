@@ -209,6 +209,13 @@ a {
   .movies-grid {
     grid-template-columns: 1fr;
   }
+  .movie-card {
+    width: min(300px, 90vw);
+  }
+  .movie-poster {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* == För större skärmar) == */
