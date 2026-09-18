@@ -53,6 +53,7 @@ a {
 
 .nav-item:hover {
   color: #466086;
+  background-color: #fff;
 }
 .navbar {
   display: flex;
