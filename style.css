@@ -207,6 +207,7 @@ a {
   }
   .movies-grid {
     grid-template-columns: 1fr;
+    justify-content: center;
   }
   .movie-card {
     width: min(300px, 90vw);
